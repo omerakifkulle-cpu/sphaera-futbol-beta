@@ -3,18 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sphaera</title>
-<meta name="description" content="Sphaera: Süper Lig futbolcu oyunu. Beta hazırlığında.">
+<title>Sphaera - Futbolcu bilgi ve oyun sitesi</title>
+<meta name="description" content="Sphaera: Süper Lig futbolcularını tanı ve oyunlarda kendini dene. Beta hazırlığında.">
 <style>
-body{margin:0;min-height:100vh;background:#22432A;color:#fff;font-family:system-ui,Arial,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
-h1{font-size:56px;margin:0 0 12px}
-p{font-size:18px;max-width:560px;line-height:1.6}
-.tag{display:inline-block;padding:8px 16px;border-radius:999px;background:#C8973A;color:#0F2A17;font-weight:600}
+*{box-sizing:border-box}
+body{margin:0;background:#22432A;color:#fff;font-family:system-ui,'Segoe UI',Arial,sans-serif;display:flex;flex-direction:column;min-height:100vh}
+header{padding:18px 28px;border-bottom:1px solid #3F7049;font-weight:700;font-size:20px}
+.wrap{display:flex;flex:1;flex-wrap:wrap}
+aside{width:300px;background:#C8973A;color:#0F2A17;padding:28px 22px;display:flex;flex-direction:column;gap:10px}
+aside h3{margin:0 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+.tabs{display:flex;gap:8px;margin-bottom:6px}
+.tab{padding:7px 14px;border-radius:999px;font-size:14px;border:1px solid #0F2A17}
+.tab.on{background:#fff}
+.satir{display:flex;gap:8px;padding:9px;border-radius:8px;font-size:15px}
+.satir.ilk{background:#B5822F;border-left:3px solid #0F2A17}
+.satir span:first-child{width:22px}
+.satir span:nth-child(2){flex:1}
+aside p{margin:auto 0 0;font-size:12px}
+main{flex:1;padding:36px 44px;min-width:300px}
+.ust{font-size:14px;margin-bottom:6px}
+h1{font-size:40px;margin:0 0 24px}
+.kart{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mod{background:#2E5A37;border:1px solid #4A7D54;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.mod.pasif{background:#26472D;border:1px dashed #3B6B4A}
+.etk{align-self:flex-start;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px}
+.hazir{background:#fff;color:#0F2A17}
+.yakin{background:#1F4A40;color:#fff}
+.mod h2{margin:0;font-size:22px}
+.mod p{margin:0;font-size:15px;color:#C9DDB9;line-height:1.5}
+.btn{align-self:flex-start;margin-top:auto;background:#fff;color:#0F2A17;border:0;border-radius:10px;padding:10px 18px;font-weight:700}
+.btn.off{background:transparent;color:#fff;border:1px solid #fff;font-weight:600}
+@media(max-width:700px){.kart{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<h1>Sphaera</h1>
-<p>Futbolcu bilgilerini keşfet ve oyunlarda kendini dene. Site şu an beta hazırlığında.</p>
-<span class="tag">Beta yakında</span>
+<header>Sphaera</header>
+<div class="wrap">
+<aside>
+<h3>Puan tablosu</h3>
+<div class="tabs"><span class="tab on">Offline</span><span class="tab">Online · Yakında</span></div>
+<div class="satir ilk"><span>1</span><span>Takım A</span><span>—</span></div>
+<div class="satir"><span>2</span><span>Takım B</span><span>—</span></div>
+<div class="satir"><span>3</span><span>Takım C</span><span>—</span></div>
+<div class="satir"><span>4</span><span>Takım D</span><span>—</span></div>
+<div class="satir"><span>5</span><span>Takım E</span><span>—</span></div>
+<p>Online puan tablosu yakında eklenecek. Sayılar yer tutucudur.</p>
+</aside>
+<main>
+<div class="ust">Süper Lig · Beta</div>
+<div class="ust">Oyun modu seç</div>
+<h1>Ne oynamak istersin?</h1>
+<div class="kart">
+<div class="mod"><span class="etk hazir">Hazır</span><h2>Kariyer yolu</h2><p>Bir oyuncunun geçtiği kulüpleri sırayla tahmin et.</p><button class="btn">Oyna</button></div>
+<div class="mod"><span class="etk hazir">Hazır</span><h2>Oyuncu bilme</h2><p>Ülke, mevki, yaş ve forma numarası gibi ipuçlarından oyuncunun adını bul.</p><button class="btn">Oyna</button></div>
+<div class="mod pasif"><span class="etk yakin">Yakında</span><h2>Yeni mod</h2><p>Bu mod üzerinde çalışılıyor.</p><button class="btn off">Yakında</button></div>
+<div class="mod pasif"><span class="etk yakin">Yakında</span><h2>Yeni mod</h2><p>Bu mod üzerinde çalışılıyor.</p><button class="btn off">Yakında</button></div>
+</div>
+</main>
+</div>
 </body>
 </html>
